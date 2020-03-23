@@ -51,6 +51,8 @@
             message: message
           };
 
+          document.getElementsByName("message")[0].value = "";
+
           renderMessage(messageObject);
 
           socket.emit("sendMessage", messageObject);
